@@ -1,0 +1,11 @@
+# Secrets
+.env
+.envrc
+
+# Runtime data
+stats.json
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store

@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: zyrox-cloud-pannel
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PUTER_TOKEN
+        sync: false
+      - key: ACCESS_TOKEN
+        generateValue: true
+      - key: DASHBOARD_KEY
+        generateValue: true
+      - key: DEFAULT_MODEL
+        value: anthropic/claude-sonnet-5
+      - key: MODELS
+        value: anthropic/claude-sonnet-5,z-ai/glm-4.7,z-ai/glm-4.6,z-ai/glm-4.5
+      - key: CORS_ORIGIN
+        value: "*"
