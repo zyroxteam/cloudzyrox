@@ -19,7 +19,7 @@ const ACCESS_TOKEN = (process.env.ACCESS_TOKEN || '').trim();
 const DASHBOARD_KEY = (process.env.DASHBOARD_KEY || '').trim();
 const DEFAULT_MODEL = process.env.DEFAULT_MODEL || 'anthropic/claude-sonnet-5';
 const UPSTREAM = 'https://api.puter.com/puterai/openai/v1';
-const MODELS = (process.env.MODELS || 'anthropic/claude-sonnet-5,z-ai/glm-4.7,z-ai/glm-4.6,z-ai/glm-4.5').split(',').map(id => ({id:id.trim(), tier:'Puter'}));
+const MODELS = (process.env.MODELS || 'anthropic/claude-haiku-4-5,anthropic/claude-sonnet-5,anthropic/claude-opus-4-8,anthropic/claude-opus-5,anthropic/claude-fable-5,z-ai/glm-4.7,z-ai/glm-4.6,z-ai/glm-4.5').split(',').map(id => ({id:id.trim(), tier:'Puter'}));
 const FILE = path.join(__dirname, 'stats.json');
 const day = () => new Date().toISOString().slice(0,10);
 let stats = { date:day(), total:0, today:0, success:0, failed:0, recent:[], models:{} };
