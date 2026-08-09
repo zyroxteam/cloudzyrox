@@ -19,7 +19,7 @@ const ACCESS_TOKEN = (process.env.ACCESS_TOKEN || '').trim();
 const DASHBOARD_KEY = (process.env.DASHBOARD_KEY || '').trim();
 const DEFAULT_MODEL = process.env.DEFAULT_MODEL || 'anthropic/claude-sonnet-5';
 const UPSTREAM = 'https://api.puter.com/puterai/openai/v1';
-const MODELS = (process.env.MODELS || 'anthropic/claude-haiku-4-5,anthropic/claude-sonnet-5,anthropic/claude-opus-4-8,anthropic/claude-opus-5,anthropic/claude-fable-5,z-ai/glm-4.7,z-ai/glm-4.6,z-ai/glm-4.5').split(',').map(id => ({id:id.trim(), tier:'Puter'}));
+const MODELS = (process.env.MODELS || 'anthropic/claude-haiku-4-5,anthropic/claude-sonnet-5,anthropic/claude-opus-4-8,anthropic/claude-opus-5,anthropic/claude-fable-5,z-ai/glm-4.7,z-ai/glm-4.6,z-ai/glm-4.5,deepseek/deepseek-v4-pro:free,moonshotai/kimi-k2.6:free,qwen/qwen3.6-plus:free,minimax/minimax-m2.5:free,minimax/minimax-m2.7:free,openai/gpt-oss-20b:free,google/gemma-4-26b-a4b-it:free,google/gemma-4-31b-it:free,cohere/north-mini-code:free,poolside/laguna-s-2.1:free,poolside/laguna-xs-2.1:free,inclusionai/ling-3.0-tiny:free,nvidia/nemotron-3-super-120b-a12b:free,nvidia/nemotron-3-ultra-550b-a55b:free,nvidia/nemotron-3-nano-30b-a3b:free').split(',').map(id => ({id:id.trim(), tier:'Puter'}));
 const FILE = path.join(__dirname, 'stats.json');
 const day = () => new Date().toISOString().slice(0,10);
 let stats = { date:day(), total:0, today:0, success:0, failed:0, recent:[], models:{} };

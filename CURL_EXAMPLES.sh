@@ -2,10 +2,11 @@
 #  Zyrox Cloud Pannel — Ready-to-use curl commands
 #  Host: https://cloudzyrox.onrender.com
 #  Access Token: toxic
+#  Total models: 23
 # ============================================
 
 # ────────────────────────────────────────────
-#  ANTHROPIC CLAUDE MODELS
+#  ANTHROPIC CLAUDE MODELS (5)
 # ────────────────────────────────────────────
 
 # ---- 1. Claude Haiku 4.5 (fast + cheap) ----
@@ -39,7 +40,7 @@ curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
   -d '{"model":"anthropic/claude-fable-5","messages":[{"role":"user","content":"Ek chhoti si kahani sunao."}],"max_tokens":500}'
 
 # ────────────────────────────────────────────
-#  Z-AI GLM MODELS
+#  Z-AI GLM MODELS (3)
 # ────────────────────────────────────────────
 
 # ---- 6. GLM 4.7 ----
@@ -61,10 +62,105 @@ curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
   -d '{"model":"z-ai/glm-4.5","messages":[{"role":"user","content":"Python me list reverse karne ka one-liner de."}],"max_tokens":300}'
 
 # ────────────────────────────────────────────
+#  FREE-TIER MODELS (15) — daily free window,
+#  kabhi-kabhi upstream 429 de sakte hain
+# ────────────────────────────────────────────
+
+# ---- 9. DeepSeek V4 Pro ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"deepseek/deepseek-v4-pro:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 10. Kimi K2.6 ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"moonshotai/kimi-k2.6:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 11. Qwen 3.6 Plus ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"qwen/qwen3.6-plus:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 12. MiniMax M2.5 ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"minimax/minimax-m2.5:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 13. MiniMax M2.7 ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"minimax/minimax-m2.7:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 14. GPT-OSS 20B ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"openai/gpt-oss-20b:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 15. Gemma 4 26B ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"google/gemma-4-26b-a4b-it:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 16. Gemma 4 31B ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"google/gemma-4-31b-it:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 17. North Mini Code ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"cohere/north-mini-code:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 18. Laguna S 2.1 ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"poolside/laguna-s-2.1:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 19. Laguna XS 2.1 ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"poolside/laguna-xs-2.1:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 20. Ling 3.0 Tiny ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"inclusionai/ling-3.0-tiny:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 21. Nemotron 3 Super 120B ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"nvidia/nemotron-3-super-120b-a12b:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 22. Nemotron 3 Ultra 550B ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"nvidia/nemotron-3-ultra-550b-a55b:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ---- 23. Nemotron 3 Nano 30B ----
+curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
+  -H "Authorization: Bearer toxic" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"nvidia/nemotron-3-nano-30b-a3b:free","messages":[{"role":"user","content":"Hello, reply exactly: OK"}],"max_tokens":300}'
+
+# ────────────────────────────────────────────
 #  ADVANCED PATTERNS
 # ────────────────────────────────────────────
 
-# ---- 9. System + User (roleplay / task) ----
+# ---- System + User (roleplay / task) ----
 curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
   -H "Authorization: Bearer toxic" \
   -H "Content-Type: application/json" \
@@ -77,7 +173,7 @@ curl -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
     "max_tokens":800
   }'
 
-# ---- 10. Streaming response (real-time) ----
+# ---- Streaming response (real-time) ----
 curl -N -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
   -H "Authorization: Bearer toxic" \
   -H "Content-Type: application/json" \
@@ -87,12 +183,12 @@ curl -N -X POST "https://cloudzyrox.onrender.com/v1/chat/completions" \
 #  UTILITY ENDPOINTS
 # ────────────────────────────────────────────
 
-# ---- 11. List all available models ----
+# ---- List all available models (23) ----
 curl -H "Authorization: Bearer toxic" "https://cloudzyrox.onrender.com/v1/models"
 
-# ---- 12. Health check ----
+# ---- Health check ----
 curl "https://cloudzyrox.onrender.com/health"
 
-# ---- 13. Live Dashboard (browser me kholo) ----
+# ---- Live Dashboard (browser me kholo) ----
 # https://cloudzyrox.onrender.com
 # Dashboard key: zyrox
